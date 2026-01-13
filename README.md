@@ -1,6 +1,6 @@
 # Stuart-Landau AuTSM (Double Autoencoder + CPC)
 
-This repository trains a spatial transformer autoencoder for Stuart-Landau oscillator trajectories and then fits a temporal CPC model over the learned latents. All paths are relative, so run commands from the repo root.
+This repository trains a transformer autoencoder that treats oscillators as tokens within each frame, producing a per-frame CLS latent and reconstructing the same frame. It then fits a temporal CPC model over those latents. All paths are relative, so run commands from the repo root.
 
 ## Quick start
 
@@ -16,7 +16,7 @@ This repository trains a spatial transformer autoencoder for Stuart-Landau oscil
 
 ## Scripts
 
-- `train_spatial.py`: trains the spatial transformer autoencoder over oscillators, writes `spatial_latent_vectors.csv`, checkpoints, and training logs. Optional `--test_recon_quality` exports reconstruction videos.
+- `train_spatial.py`: trains a per-frame transformer autoencoder over oscillators (CLS latent + frame reconstruction), writes `spatial_latent_vectors.csv`, checkpoints, and training logs. Optional `--test_recon_quality` exports reconstruction videos.
 - `train_temporal_cpc.py`: trains the temporal CPC model on the spatial latents, writes spatiotemporal latent CSVs and checkpoints.
 - `plot_umap_coloredby_order.py`: projects spatiotemporal latents with UMAP and saves order/K-colored PNGs.
 
