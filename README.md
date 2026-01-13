@@ -1,4 +1,4 @@
-# Stuart-Landau AuTSM (Double Autoencoder + CPC)
+# Stuart-Landau Autoencoded Time Series Mapping (AuTSM) Demonstration
 
 This repository trains a transformer autoencoder that treats oscillators as tokens within each frame, producing a per-frame CLS latent and reconstructing the same frame. It then fits a temporal CPC model over those latents. All paths are relative, so run commands from the repo root.
 
