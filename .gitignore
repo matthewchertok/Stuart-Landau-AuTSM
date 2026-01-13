@@ -4,7 +4,7 @@
 !*.slurm
 !/README.md
 !/stuart_landau_trajectories_with_replicates.csv
-!/spatiotemporal_latents_coloredby_order.png
-!/spatiotemporal_latents_coloredby_k.png
+!/outputs/spatiotemporal_latents_coloredby_order.png
+!/outputs/spatiotemporal_latents_coloredby_k.png
 !.gitignore
 !.gitattributes

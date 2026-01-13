@@ -44,25 +44,25 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--order_output",
         type=Path,
-        default=Path("spatiotemporal_latents_coloredby_order.png"),
+        default=Path("outputs") / "spatiotemporal_latents_coloredby_order.png",
         help="Path for the Forward/Reversed/Scrambled UMAP figure.",
     )
     parser.add_argument(
         "--k_output",
         type=Path,
-        default=Path("spatiotemporal_latents_coloredby_k.png"),
+        default=Path("outputs") / "spatiotemporal_latents_coloredby_k.png",
         help="Path for the K-colored UMAP figure.",
     )
     parser.add_argument(
         "--scrambled_order_output",
         type=Path,
-        default=Path("spatiotemporal_latents_scrambled_coloredby_order.png"),
+        default=Path("outputs") / "spatiotemporal_latents_scrambled_coloredby_order.png",
         help="Path for the fully scrambled dataset's order-colored UMAP.",
     )
     parser.add_argument(
         "--scrambled_k_output",
         type=Path,
-        default=Path("spatiotemporal_latents_scrambled_coloredby_k.png"),
+        default=Path("outputs") / "spatiotemporal_latents_scrambled_coloredby_k.png",
         help="Path for the fully scrambled dataset's K-colored UMAP.",
     )
     parser.add_argument(
