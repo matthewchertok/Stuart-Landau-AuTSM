@@ -18,7 +18,7 @@ This repository trains a transformer autoencoder that treats oscillators as toke
 
 - `train_spatial.py`: trains a per-frame transformer autoencoder over oscillators (CLS latent + frame reconstruction), writes `spatial_latent_vectors.csv`, checkpoints, and training logs. Optional `--test_recon_quality` exports reconstruction videos.
 - `train_temporal_cpc.py`: trains the temporal CPC model on the spatial latents, writes spatiotemporal latent CSVs and checkpoints.
-- `plot_umap_coloredby_order.py`: projects spatiotemporal latents with UMAP and saves order/K-colored PNGs.
+- `plot_umap_coloredby_order.py`: projects spatiotemporal latents with UMAP and saves order-colored/coupling-strength-colored PNGs.
 
 ## Slurm entry points
 
@@ -30,6 +30,10 @@ This repository trains a transformer autoencoder that treats oscillators as toke
 ## Data
 
 - `stuart_landau_trajectories_with_replicates.csv` is required and tracked with Git LFS. Make sure LFS is installed and the file is present after cloning.
+
+## Outputs
+- spatiotemporal_latents_coloredby_k.png: projection of trajectory embeddings to 2D, colored by coupling strength. This plot reveals three distinct manifolds, each parametrized by coupling strength (K), revealing the expected outcome that coupling strength determines similarity.
+- spatiotemporal_latents_coloredby_order.png: the same projection as above, colored by integration order (forward/reversed/scrambled). This plot reveals three distinct manifolds, each corresponding to a different order, recovering the expected dynamical regimes.
 
 ## Conda environment requirements
 
